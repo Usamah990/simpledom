@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise</title>
+</head>
+<body>
+    <!-- 9a  -->
+    <button>9a</button> <br>
+
+    <!-- 9b -->
+    <button id="9b-btn">9b</button> <br>
+
+    <!-- 9c -->
+    <button id="heads-btn" onclick="playGame('heads')">heads</button>
+    <button id="tails-btn" onclick="playGame('tails')">tails</button>
+    <p></p>
+
+    <!-- 9d  -->
+    <form action="#">
+        <input type="text" placeholder="Name" id="input-name">
+        <input type="submit" value="Submit" onclick="submitYourName()">
+    </form>
+    <p id="name-show"></p>
+    <script>
+        const buttonElement = document.querySelector('button')
+        document.getElementById('9b-btn').innerText = '9b done!'
+
+        console.log(buttonElement)
+
+        const submitYourName = () => {
+            const inputValue = document.getElementById('input-name').value
+            document.getElementById('name-show').innerText = `Your name is: ${inputValue}`
+        }
+
+        const playGame = (param) => {
+            if (param === 'heads') {
+                document.querySelector('p').innerText = `You chose: ${param}`
+            } else {
+                document.querySelector('p').innerText = `You chose: ${param}`
+            }
+        }
+    </script>
+</body>
+</html>
